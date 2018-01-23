@@ -1,0 +1,176 @@
+/*
+ * @Author: JackWang9583 
+ * @Date: 2017-12-30 13:27:01 
+ * @Last Modified by: JackWang9583
+ * @Last Modified time: 2018-01-22 17:52:10
+ */
+body{
+  display: flex;
+  flex-direction: row;
+}
+/* 左侧开始 */
+#lf_area{
+  width: auto;
+  height: 100%;
+  background: #2f4050;
+  display: flex;
+  flex-direction: column;
+}
+#lf_area .layui-nav-tree .layui-nav-bar{ display: none; }
+/* 用户展示 */
+#user{
+  padding: 33px 25px;
+  background: url(userBg.png) no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+#user img{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+#user strong{ 
+  color: #DFE4ED; 
+  line-height: 24px;
+}
+#user span{ 
+  color: #8095a8; 
+}
+/* 导航列表 */
+#navList{ 
+  flex: 1; 
+  overflow: auto;
+}
+#navList.layui-nav {
+  background: #2f4050;
+}
+.layui-nav-itemed .layui-nav-child{
+  background: #2f4050 !important;
+}
+#navList .fa{
+  margin-right: 20px;
+}
+.layui-nav-tree .layui-nav-item a:hover{
+  background: #293846;
+}
+.layui-nav-tree .layui-nav-child dd.layui-this, 
+.layui-nav-tree .layui-nav-child dd.layui-this a, 
+.layui-nav-tree .layui-this, 
+.layui-nav-tree .layui-this>a, 
+.layui-nav-tree .layui-this>a:hover{
+  background: #293846;
+}
+/* 右侧开始 */
+#rg_area{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* tabBar box */
+.barBox{
+  width: 100%;
+  border-bottom: 2px solid #2f4050;
+  display: flex;
+  flex-direction: row;
+}
+.barBox .layui-btn{
+  background: #fff;
+  color: #999;
+}
+.barBox .layui-btn:hover, .barBox .layui-btn:active{
+  background: #f2f2f2;
+}
+/* tabBar */
+.tabBarBox{
+  flex: 1;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  overflow: hidden;
+  position: relative;
+}
+.tabBarBox>div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100000000px;
+}
+#tabBar{
+  display: flex;
+  flex-direction: row;
+  transition: all linear .5s;
+  position: relative;
+  left: 0;
+}
+#tabBar .tabLi{
+  height: 38px;
+  line-height: 38px;
+  padding: 0 15px;
+  border-right: 1px solid #f2f2f2;
+  color: #999;
+  transition: all linear .5s;
+}
+#tabBar .tabLi:hover{ background: #f2f2f2; }
+#tabBar .tabLi.active{
+  background: #2f4050;
+  color: #a7b1c2;
+}
+#tabBar .tabLi.active:hover{ color: #fff; }
+#tabBar .tabLi .fa{ 
+  margin-left: 5px; 
+  color: #ccc; 
+}
+#tabBar .tabLi .fa:hover{
+  color: #CC221F;
+}
+/* btnList */
+#btnList{
+  height: 38px;
+  line-height: 38px;
+  padding: 0 10px;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  cursor: pointer;
+  position: relative;
+}
+#btnList:hover{ background: #f2f2f2; }
+.myPop{
+  display: none;
+  width: 150px;
+  border: medium none;
+  font-size: 12px;
+  list-style: none outside none;
+  padding: 0;
+  position: absolute;
+  text-shadow: none;
+  top: 40px;
+  right: 0;
+  z-index: 1000;
+  border-radius: 0;
+  box-shadow: 0 0 3px rgba(86,96,117,.3);
+}
+.myPop li a{
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #f2f2f2;
+  color: #999;
+  padding-left: 30px;
+}
+.myPop li a:hover{
+  background: #f2f2f2;
+  color: #333;
+}
+/* #iframeBox */
+#iframeBox{
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+#iframeBox .iframeLi{
+  flex: 1;
+  display: none;
+}
+#iframeBox .iframeLi.active{
+  display: block;
+}
