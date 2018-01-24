@@ -39,4 +39,13 @@ function enterLoadClose () {
   }, 300, function () {
     $(this).remove();
   });
+  // 定义body滚动条
+  $('body').mCustomScrollbar({
+    autoHideScrollbar: true,
+    autoExpandScrollbar: true,
+    advanced:{ 
+      autoExpandHorizontalScroll: true,
+      updateOnSelectorChange: "*"
+    }
+  });
 }

@@ -2,7 +2,7 @@
  * @Author: JackWang9583 
  * @Date: 2017-12-30 13:26:50 
  * @Last Modified by: JackWang9583
- * @Last Modified time: 2018-01-23 14:01:53
+ * @Last Modified time: 2018-01-23 14:53:40
  */
 @charset "utf-8";
 @import "../plugins/layui/css/layui.css";
@@ -29,9 +29,12 @@ body,html{
   overflow-x: hidden;
   font-family: "SourceCodePro", "Times New Roman", Georgia, Serif;
 }
-body#flexBox{
+#flexBox{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
-  flex-direction: column;
 }
 /* 页面加载的时候显示loading */
 /* load css */
